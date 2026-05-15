@@ -11,7 +11,7 @@ public class ExampleApplication {
 		System.out.println(myFirstClass.sayHello());
 	}
 
-	@Bean
+//	@Bean
 	public MyFirstClass myFirstClass() {
 		return new MyFirstClass();
 	}
