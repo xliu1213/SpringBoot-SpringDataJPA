@@ -1,7 +1,7 @@
 package com.alibou.example;
 
 public class MyFirstClass {
-    private String myVar;
+    private final String myVar;
 
     public MyFirstClass(String myVar) {
         this.myVar = myVar;
