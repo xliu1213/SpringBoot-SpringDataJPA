@@ -1,7 +1,6 @@
 package com.alibou.example;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ApplicationConfig {
@@ -16,7 +15,6 @@ public class ApplicationConfig {
     }
 
     @Bean
-//    @Primary
     public MyFirstClass myThirdBean() {
         return new MyFirstClass("Third bean");
     }
