@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ApplicationConfig {
-    @Bean
+    @Bean("bean1")
     public MyFirstClass myFirstBean() {
         return new MyFirstClass("First bean");
     }
@@ -16,7 +16,7 @@ public class ApplicationConfig {
     }
 
     @Bean
-    @Primary
+//    @Primary
     public MyFirstClass myThirdBean() {
         return new MyFirstClass("Third bean");
     }
