@@ -12,25 +12,13 @@ import org.springframework.stereotype.Service;
 })
 public class MyFirstService {
     private final MyFirstClass myFirstClass;
-
-    @Value("Hello Alibou students")
+    @Value("${my.custom.property}")
     private String customProperty;
-
-    @Value("${my.prop}")
-    private String customPropertyFromAnotherFile;
-
-    @Value("123")
+    @Value("${my.custom.property.int}")
     private Integer customPropertyInt;
-
-    @Value("${my.prop.2}")
-    private String customPropertyFromAnotherFile2;
 
     public MyFirstService(@Qualifier("bean1") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
-    }
-
-    public String getCustomPropertyFromAnotherFile2() {
-        return customPropertyFromAnotherFile2;
     }
 
     public String tellAStory() {
@@ -39,10 +27,6 @@ public class MyFirstService {
 
     public String getCustomProperty() {
         return customProperty;
-    }
-
-    public String getCustomPropertyFromAnotherFile() {
-        return customPropertyFromAnotherFile;
     }
 
     public Integer getCustomPropertyInt() {
